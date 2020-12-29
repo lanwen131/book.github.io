@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>书页</title>
+	<link rel="stylesheet" href="css/zoom.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="box">
+		<div class="mainbox">
+			<div class="title">
+				<div class="p">或者甚至是法国考古学家、妇女参政论者兼小说家<span>（雅玛杭特•狄虹）。
+					<div class="note-num">3 <div class="note-msg">3 关于狄虹的推测特别愚蠢。凡是至今可取得的证据都显示石察卡是男性。</div></div>
+				</span>
+				</div>
+			</div>
+			<div class="content">
+				&nbsp;&nbsp;有些号称严谨的人提出了玄秘出身的说法：得到十四世纪修女口谕的小女孩！来自某个遥远星球的古代纳斯卡王！欧嘉女大公，遭谋杀前后都在写作！以及其他谬论：一名凶狠的塞尔维亚民族主义分子，只知其外号叫“阿匹斯神的抄缮官”！几乎可以确定为虚构的“最后一个西班牙海盗”胡安•布拉斯•科瓦鲁维亚斯！那百万只闻名遐迩的打字猴！这些全都不值一哂。<br/>&nbsp;&nbsp;我没有兴趣争辩哪个石察卡的“可能人选”概率最大（无论是看似可信、异想天开或其他）。我不知道他的本名、出生地或母语为何，不知道他的身高、体重、地址、工作经历，或旅游路径，（不知道他是否犯下过任何一桩他曾被指控的非法、破坏或暴力恶行。）我不在乎其他人认为他是谁或对他<span>有何看法。				
+					<div class="note-num">4
+						<div class="note-msg">4 我认为他是危险人物吗？也许吧，假如你为他带来危险的话。</div>
+					</div>
+				</span>
+			</div>
+			
+		</div>
+		<div class="aside">
+			<div class="img1"><img src="images/index_01.jpg" alt=""  data-action="zoom"></div>
+			<div class="img2">
+				<img src="images/index_02.jpg" alt=""  data-action="zoom">
+				<img src="images/index_03.jpg" alt=""  data-action="zoom">
+				<img src="images/index_04.jpg" alt=""  data-action="zoom">
+				<img src="images/index_05.jpg" alt=""  data-action="zoom">
+				<img src="images/index_06.jpg" alt=""  data-action="zoom">
+				<img src="images/index_07.jpg" alt=""  data-action="zoom">
+				<img src="images/index_08.jpg" alt=""  data-action="zoom">
+			</div>
+		</div>
+	</div>
+	<div class="model">
+		<div class="pop"></div>
+		<div class="model-content"></div>
+	</div>
+	<script src='https://libs.baidu.com/jquery/1.11.1/jquery.min.js'></script>
+	<script src='https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+	<script src="js/zoom.js"></script>
+	<script>
+		$(function(){
+			var u = window.navigator.userAgent
+			var e = u.match(/iPad/i);
+			var event="click";
+			if(e=="iPad"){
+				event="tab"
+			}
+			$(".note-num").on(event,function(){
+			    $(".model").addClass("open");
+				$(".model-content").html($(this).find(".note-msg").html());
+			});
+			$(".model .pop").on(event,function(){
+				$(".model").removeClass("open");
+			});
+		});
+	</script>
+</body>
+</html>

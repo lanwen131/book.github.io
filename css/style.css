@@ -1,0 +1,113 @@
+*{
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+img{
+	vertical-align:top;
+}
+.box{
+	display:-ms-flex;
+	display:flex;
+	width:780px;
+	height:1024px;
+	margin:0 auto;
+	background: url(../images/bg.jpg);
+}
+.mainbox{
+	flex:1;
+	padding-left: 40px; 
+	padding-top: 130px;
+	font-family: "宋体";
+	font-size: 20px;
+	line-height:36px;
+	color: #010101;
+}
+.mainbox .title{
+	display:-ms-flex;
+	display:flex;
+	align-items:flex-start;
+	padding-bottom: 50px;
+}
+.mainbox .title:before{
+	content:"";
+	display: block;
+	width:8px;
+	height:8px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+	background-color: #010101;
+	margin-top: 14px;
+}
+.mainbox .title .p{
+	flex:1;
+	margin-left: 15px;
+}
+.mainbox .content{
+	margin-top: 60px;
+}
+.mainbox .content span,.mainbox .title .p span{
+	position: relative;
+}
+.aside{
+	width:272px;
+}
+.aside .img1{
+	padding-top: 97px;
+}
+.aside .img2{
+	padding-top: 119px;
+}
+.note{
+	font-size: 14px;
+	line-height:20px;
+	margin-top: 30px;
+}
+.zoom-overlay{
+	background-color: rgba(0,0,0,.5);
+}
+.note-num{
+	position: absolute;
+	top:-15px;
+	right:0px;
+	font-size: 16px;
+}
+.note-msg{
+	display: none;
+}
+.model{
+	width:100%;
+	height:100%;
+	display: none;
+	justify-content:center;
+	align-items:center;
+	position: fixed; 
+	z-index:9;
+	left:0;
+	top:0;
+}
+.model.open{
+	display:-ms-flex;
+	display:flex;
+}
+.model .pop{
+	display:block;
+	width:100%;
+	height:100%;
+	position: absolute;
+	background-color: rgba(0,0,0,.5);
+	z-index:1;
+}
+.model-content{
+	position: relative;
+	z-index:999;
+	display: inline-block;
+	background-color: #fff;
+	padding:30px 40px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
